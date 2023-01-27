@@ -1,0 +1,71 @@
+.programs
+    display: flex
+    flex-direction: column
+    gap: 2rem
+    padding: 0 2rem
+
+    &__header
+        display: flex
+        gap: 5rem
+        font-size: 3rem
+        font-weight: bold
+        justify-content: center
+        align-items: flex-end
+        color: $white
+        font-style: italic
+
+        span:nth-of-type(odd)
+            @extend %stroke-text
+
+    &__categories
+        display: flex
+        gap: 1rem
+
+        .category
+            display: flex
+            flex: 1 1
+            flex-direction: column
+            background: $programGray
+            padding: 2rem
+            gap: 1rem
+            color: $white
+            justify-content: space-between
+
+            &:hover
+                background: $planCard
+                cursor: pointer
+
+            &>:nth-child(1)
+                width: 2rem
+                height: 2rem
+                fill: $white
+
+            &>:nth-child(2)
+                font-size: 1rem
+                font-weight: bold
+
+            &>:nth-child(3)
+                font-size: 0.9rem
+                line-height: 25px
+
+            .join
+                display: flex
+                align-items: center
+                gap: 2rem
+
+                img
+                    width: 1rem
+
+@include md
+    .programs
+
+        &__header
+            flex-direction: column
+            gap: 1rem
+            font-size: x-large
+            justify-content: center
+            align-items: center
+            margin-top: 2rem
+
+        &__categories
+            flex-direction: column

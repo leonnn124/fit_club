@@ -1,0 +1,119 @@
+.tesmionials
+    display: flex
+    gap: 1rem
+    padding: 0 2rem
+
+    &__left
+        display: flex
+        flex: 1 1
+        gap: 2rem
+        flex-direction: column
+        color: $white
+
+        span
+
+            &:nth-child(1)
+                color: $orange
+                font-weight: bold
+
+            &:nth-child(2)
+                @extend  %stroke-text
+                font-weight: bold
+                font-size: 3rem
+
+            &:nth-child(3)
+                font-weight: bold
+                font-size: 3rem
+
+            &:nth-child(4)
+                text-align: justify
+                letter-spacing: 2px
+                line-height: 40px
+
+    &__person
+
+        span
+
+            &:nth-child(1)
+                font-weight: normal
+
+    &__right
+        flex: 1 1
+        position: relative
+
+        &>img
+            position: absolute
+            width: 17rem
+            height: 20rem
+            object-fit: cover
+            right: 8rem
+            top: 2rem
+
+        &>div
+
+            &:nth-child(1)
+                position: absolute
+                width: 17rem
+                height: 20rem
+                border: 2px solid $orange
+                background-color: transparent
+                right: 9rem
+                top: 0.9rem
+
+            &:nth-child(2)
+                position: absolute
+                width: 17rem
+                height: 19rem
+                background: $planCard
+                right: 7rem
+                top: 4rem
+
+    &__arrows
+        display: flex
+        gap: 1rem
+        position: absolute
+        bottom: 1rem
+        left: 3rem
+
+        img
+            width: 1.5rem
+            cursor: pointer
+
+@include md
+    .tesmionials
+        flex-direction: column
+
+        &__left
+
+            span
+
+                &:nth-child(2)
+                    font-size: xx-large
+
+                &:nth-child(3)
+                    font-size: xx-large
+
+        &__right
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            gap: 2rem
+
+            &>img
+                top: 0
+                right: 0
+                position: relative
+                align-self: center
+                margin: 2rem
+
+            &>div
+                display: none
+                position: relative
+
+        &__arrows
+            display: block !important
+            left: 0
+
+            img
+                margin: 0 2rem

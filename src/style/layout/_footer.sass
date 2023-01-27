@@ -1,0 +1,46 @@
+.footer
+    position: relative
+
+    .blur
+
+        &:nth-child(1)
+            @extend %blur
+            bottom: 0
+            right: 15%
+            width: 26rem
+            height: 12rem
+            background: red
+
+        &:nth-child(2)
+            @extend %blur
+            bottom: 0
+            left: 15%
+            width: 26rem
+            height: 12rem
+            background: rgb(255,115,0)
+
+    hr
+        border: 1px solid $lightgray
+
+    &__container
+        padding: 1rem 2rem
+        display: flex
+        flex-direction: column
+        gap: 4rem
+        align-items: center
+        justify-content: center
+        height: 20rem
+
+        .social
+            display: flex
+            gap: 4rem
+
+            img
+                width: 2rem
+                height: 2rem
+                cursor:
+
+        .logo
+
+            img
+                width: 10rem

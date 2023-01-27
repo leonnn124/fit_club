@@ -1,0 +1,47 @@
+.header
+    display: flex
+    justify-content: space-between
+
+    &__bars
+        padding: 0.5rem
+        border-radius: 5px
+        position: fixed
+        display: flex
+        right: 2rem
+        justify-content: center
+        align-items: center
+        z-index: 999
+        background-color: $deepGray
+
+        &>img
+            width: 1.5rem
+            height: 1.5rem
+
+    &__logo
+        width: 10rem
+        height: 3rem
+
+    &__menu
+        list-style: none
+        display: flex
+        gap: 2rem
+        color: $white
+
+        a
+            cursor: pointer
+
+            &:hover
+                color: $orange
+                transition: all 0.3s ease
+
+@include md
+
+    .header
+
+        &__menu
+            position: fixed
+            right: 2rem
+            z-index: 99
+            flex-direction: column
+            background-color: $appColor
+            padding: 2rem
